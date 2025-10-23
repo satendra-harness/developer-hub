@@ -41,7 +41,7 @@ Set up FME in your code base with two simple steps.
 ### 1. Import the SDK into your project using pip
 
 ```bash title="Shell"
-pip install 'splitio_client[cpphash]==10.5.0'
+pip install 'splitio_client[cpphash]==10.5.1'
 ```
 
 ### 2. Instantiate the SDK and create a new SDK factory client
@@ -85,7 +85,7 @@ Set up FME in your code base with two simple steps.
 ### 1. Import the SDK into your project using pip
 
 ```bash title="Shell"
-pip install 'splitio_client[cpphash,asyncio]==10.5.0'
+pip install 'splitio_client[cpphash,asyncio]==10.5.1'
 ```
 
 ### 2. Instantiate the SDK and create a new SDK factory client
@@ -151,14 +151,14 @@ Use `pip install` to install the SDK. Note that the package is different for sta
 <TabItem value="Multi-threaded">
 
 ```bash
-pip install 'splitio_client[redis,cpphash]==10.5.0'
+pip install 'splitio_client[redis,cpphash]==10.5.1'
 ```
 
 </TabItem>
 <TabItem value="asyncio">
 
 ```bash
-pip install 'splitio_client[redis,cpphash,asyncio]==10.5.0'
+pip install 'splitio_client[redis,cpphash,asyncio]==10.5.1'
 ```
 
 </TabItem>
@@ -809,15 +809,15 @@ Three types of properties are supported: strings, numbers, and booleans.
 <TabItem value="Multi-threaded">
 
 ```python
-# Define impression properties
-properties = {
+# Define impression properties inside EvaluationOptions structure
+evaluation_option = EvaluationOptions({
     "userType": "premium",  # string
     "loginCount": 42,       # number
     "isAdmin": True         # boolean
-}
+})
 
 # Get treatment with properties
-treatment = split.get_treatment('key', 'FEATURE_FLAG_NAME', properties=properties)
+treatment = split.get_treatment('key', 'FEATURE_FLAG_NAME', evaluation_options=evaluation_option)
 
 if treatment == "on":
     # Show ON treatment

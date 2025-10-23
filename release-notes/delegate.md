@@ -113,6 +113,46 @@ import Deleos from '/docs/platform/shared/delegate-legacy-eos.md'
 
 ## Delegate image release notes
 
+## October 2025
+
+### Version 25.10.86901 <!--October 15, 2025-->
+
+#### Fixed issues
+
+- Incorrect connector type used during Kubernetes and Native Helm instance sync [CDS-114904]
+
+### Version 25.10.86900 <!--October 08, 2025-->
+
+#### Fixed issues
+
+- Added support for fetching labels for multi-architecture images stored in ECR. [CDS-113117]
+- Enhanced error messages when a delegate's dependency binaries are missing. [CDS-112385]
+- Improved error information during Git failures by including specific error details instead of generic exceptions. [CDS-104652]
+
+### Version 25.08.86601 <!--October 08, 2025-->
+
+#### Fixed issues
+
+- Incorrect connector type used during Kubernetes and Native Helm instance sync [CDS-114904]
+
+### Version 25.09.86704 <!--October 08, 2025-->
+
+#### Fixed issues
+
+- Incorrect connector type used during Kubernetes and Native Helm instance sync [CDS-114904]
+
+### Version 25.07.86403 <!--October 08, 2025-->
+
+#### Fixed issues
+
+- Did an optimisation to trust urls for pcf deployment early during context creation to reduce multiple trust calls in case of parallel calls. The user needs to set TRUST_EARLY and ENRICH_LOGS environment variables in the delegate. [CDS-109294]
+
+### Version 25.09.86801 <!--October 08, 2025-->
+
+#### Fixed issues
+
+- Incorrect connector type used during Kubernetes and Native Helm instance sync [CDS-114904]
+
 ## September 2025
 
 ### Version 25.09.86800 <!--September 24, 2025-->
@@ -387,7 +427,7 @@ import Deleos from '/docs/platform/shared/delegate-legacy-eos.md'
 
 #### Fixed Issues
 
-- Fixed an issue where the Harness delegate incorrectly used local container credentials instead of the OIDC access token when listing GCP projects via an OIDC-authenticated connector. This is now resolved behind the feature flag `CDS_GCP_OIDC_CONNECTOR_CROSS_PROJECT_ACCESS`, ensuring the delegate lists projects correctly based on its IAM principal. [CDS-108481]
+- Fixed an issue where the Harness delegate incorrectly used local container credentials instead of the OIDC access token when listing GCP projects via an OIDC-authenticated connector. [CDS-108481]
 
 ### Version 25.03.85503 <!-- March 27, 2025-->
 

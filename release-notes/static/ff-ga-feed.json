@@ -670,5 +670,227 @@
     "description": "Uses paginated requests to fetch connectors for webhook triggers.",
     "gaStartDate": "2025-10-03",
     "module": "Pipeline"
+  },
+  {
+    "flagKey": "CV_NEWRELIC_NEW_API",
+    "description": "FF to enable New Relic graphQL API.",
+    "gaStartDate": "2025-10-03",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CVNG_TEMPLATE_VERIFY_STEP",
+    "description": "FF to enable Verify Step Template",
+    "gaStartDate": "2025-10-03",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CV_UI_HEALTHSOURCE_SERVICE_INSTANCE_PREVIEW",
+    "description": "FF to fetch and display Service Instance Identifiers for Health Sources",
+    "gaStartDate": "2025-10-07",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CDS_ADD_STAGES_PREFIX_TO_EXECUTION_INPUT_EXPRESSIONS",
+    "description": "FF to support execution time inputs for single service propagation, without looping strategy configured at stage level",
+    "gaStartDate": "2025-10-08",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CDS_HELM_STEP_COMMAND_FLAGS",
+    "description": "Enables support for specifying command flags at the Helm step level.",
+    "gaStartDate": "2025-10-09",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CDS_K8S_NOT_ADD_TRAFFIC_ROUTING_TO_CANARY_WORKLOAD",
+    "description": "The traffic routing resources will not be added to the canary workload.",
+    "gaStartDate": "2025-10-09",
+    "module": "Continuous Delivery"
+  },
+   {
+    "flagKey": "CDS_SETTINGS_ACCORDION",
+    "description": "This will add popover for settings in the Left navigation",
+    "gaStartDate": "2025-10-13",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "PIPE_REFERENCED_TEMPLATES",
+    "description": "This will add a referenced/unreferenced tag to the templates listing card and list view.",
+    "gaStartDate": "2025-10-13",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "CVNG_TEMPLATE_MONITORED_SERVICE",
+    "description": "FF to allow creating new Monitored Service Template",
+    "gaStartDate": "2025-10-14",
+    "module": "Continuous Delivery"
+  },
+  {
+    "flagKey": "CDS_GITOPS_ENABLE_UI_CLUSTER_DETAIL_UX",
+    "description": "Flag to enable new cluster details page UX",
+    "gaStartDate": "2025-10-13",
+    "module": "GitOps"
+  },
+  {
+    "flagKey": "GITOPS_FILTER_PANE_ENABLED",
+    "description": "Flag to enable new GitOps filter panel experience",
+    "gaStartDate": "2025-10-17",
+    "module": "GitOps"
+  },
+  {
+    "flagKey": "PIPE_REMOVE_AMBIANCE_POPULATION_IN_NODE_EXECUTION",
+    "description": "FF to use remove ambiance population in nodeExecution collection",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_NOTIFICATION_TEMPLATE_INPUT_VARIABLE_PROMPT_UI",
+    "description": "FF to prompt users to fill in unresolved input variables and reconfiguring pipeline-level notification rule templates.",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_ENABLE_BARRIER_STEPS_SETUP_OPTIMIZATION",
+    "description": "This optimization makes barrier steps avoid race conditions and unecessary locks",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIE_FLEXIBLE_TEMPLATES",
+    "description": "Added support for flexible templates",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIE_FLEXIBLE_TEMPLATES_PHASE2",
+    "description": "FF for UI to show resolved templates in preview template as read only mode.",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_USE_STAGE_EXECUTION_ID_PROJECTION_FROM_AMBIANCE",
+    "description": "Use stageExecutionId projection while getting ambiance from nodeExecution",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_FIND_ALL_TERMINAL_CHILDREN_OPTIMIZATION",
+    "description": "This optimization delegates graph lookup to mongodb on NodeExecutionsCache#findAllChildrenWithStatusInAndWithoutOldRetries",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_ENABLE_TRIGGER_FAILED_NOTIFICATION",
+    "description": "FF to enabled notification when trigger fails",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_STORE_TEMPLATE_REFERENCE_SUMMARY_PER_EXECUTION",
+    "description": "FF to start storing template id and version for pipeline/stage/step per execution",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_ENABLE_MANUAL_STAGE_RUN",
+    "description": "FF to enable running a stage manually",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_USE_ORIGINAL_YAML_FOR_EXECUTION",
+    "description": "Enable Rerun with Original Pipeline Yaml",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_BULK_RECONCILIATION_PHASE2",
+    "description": "FF to enable bulk reconciliation for remote entities",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_BARRIERS_FOR_CHAINED_PIPELINES",
+    "description": "Added support for Barriers for Chained Pipelines",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_SUPPORT_DELEGATE_EXPRESSIONS_FOR_PIPELINE_NOTIFICATIONS",
+    "description": "Added support for Expressions Pipeline Notifications",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_ADD_ORIGINAL_FAILED_CHILDREN_TO_OUTPUT",
+    "description": "Included the original failed children in the failed children sweeping output to ensure correct execution of Stage Rollback.",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_DISABLE_PIPELINE_CHAINING_FOR_FREE_TIER",
+    "description": "FF to Validate License for Pipeline Chaining Feature",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_REVERT_DEPLOYMENT_TEMPLATE_FILTER_CREATION_ISSUE_FIX",
+    "description": "FF to disable fix for deployment template filter creation issue",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_ENABLE_CD_DEVOPS_ESSENTIALS_RESTRICTION",
+    "description": "FF to enable CD Devops Essentials restrictions",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_BB_ONPREM_COMPARE_COMMITS_ISSUE_FIX",
+    "description": "FF to fix the compare commits API issue on BB onprem",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_DISABLE_PIPELINE_NOTIFICATIONS_ON_ROLLBACK",
+    "description": "FF to disable sending pipeline-level notifications for rollback executions",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIPE_SUPPORT_MULTIPLE_TIMEZONES_IN_CRON_TRIGGERS",
+    "description": "FF to support scheduling cron triggers across multiple timezones",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "CDS_INCLUDE_ALWAYS_USE_STABLE_VERSION_UI",
+    "description": "Added Always use the stable version support to Template Bar for all template types",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "CDS_SAVE_PIPELINE_OPA_RESPONSE_CODE_CHANGE",
+    "description": "FF to enable 4xx response code on pipeline save when OPA policy fails",
+    "gaStartDate": "2025-10-27",
+    "module": "CDC"
+  },
+  {
+    "flagKey": "PIE_RESTRICT_NEXT_OF_STARTING_NODE_IN_NODE_GRAPH",
+    "description": "FF to enable to not process next node of starting node in the graph",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "PIE_GITX_OAUTH",
+    "description": "Use users' oauth creds to fetch and commit in git",
+    "gaStartDate": "2025-10-27",
+    "module": "Pipeline"
+  },
+  {
+    "flagKey": "GITOPS_BULK_ACTIONS_ENABLED",
+    "description": "FF to enable bulk actions (sync/refresh) for GitOps",
+    "gaStartDate": "2025-10-22",
+    "module": "GitOps"
   }
 ]

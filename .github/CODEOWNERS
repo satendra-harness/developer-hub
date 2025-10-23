@@ -76,12 +76,9 @@ static/  @rohanmaharjan100 @wei-harness
 
 # STO Docs
 /docs/security-testing-orchestration/ @tejakummarikuntla @priteshchandaliya
-/docs/faqs/security-testing-orchestration/ @tejakummarikuntla @priteshchandaliya
 /release-notes/security-testing-orchestration.md @tejakummarikuntla @priteshchandaliya
 /src/components/Roadmap/data/stoData.ts @tejakummarikuntla @priteshchandaliya
 /src/components/Docs/data/securityTestingOrchestrationData.ts @tejakummarikuntla @priteshchandaliya
-# STO FAQs
-/docs/faqs/security-testing-orchestration/ @tejakummarikuntla @priteshchandaliya
 
 # CCM Docs
 
@@ -150,11 +147,11 @@ static/  @rohanmaharjan100 @wei-harness
 /docs/platform/harness-aida/  @pratmit @thisrohangupta @ivikramsahu @abhishekharness @vishal-av
 
 # IDP Docs
-/docs/internal-developer-portal/ @OrkoHunter @manishas @khushisharmaharness @ShibamD
-/release-notes/internal-developer-portal.md @OrkoHunter @manishas @khushisharmaharness @ShibamD
-/release-notes/static/internal-developer-portal/ @OrkoHunter @manishas @khushisharmaharness @ShibamD
-/src/components/Roadmap/data/idpData.ts @OrkoHunter @manishas @khushisharmaharness @ShibamD
-/src/components/Docs/data/internalDeveloperPortal.ts @OrkoHunter @manishas @khushisharmaharness @ShibamD
+/docs/internal-developer-portal/ @OrkoHunter @manishas @khushisharmaharness @Thewonderer @sandeepa-kv-jois 
+/release-notes/internal-developer-portal.md @OrkoHunter @manishas @khushisharmaharness @Thewonderer @sandeepa-kv-jois
+/release-notes/static/internal-developer-portal/ @OrkoHunter @manishas @khushisharmaharness @Thewonderer @sandeepa-kv-jois
+/src/components/Roadmap/data/idpData.ts @OrkoHunter @manishas @khushisharmaharness @Thewonderer @sandeepa-kv-jois
+/src/components/Docs/data/internalDeveloperPortal.ts @OrkoHunter @manishas @khushisharmaharness @Thewonderer @sandeepa-kv-jois
 
 # SCS Docs
 /docs/software-supply-chain-assurance/ @sunilgupta-harness @tejakummarikuntla @pranay-harness @lavakush07 @udit910
@@ -231,9 +228,6 @@ static/  @rohanmaharjan100 @wei-harness
 
 #Armory KB
 /kb/armory @jimin-harness @deepanshuHarness
-
-# DB DevOps
-/kb/database-devops/ @stephenatwell @HarnessTheChaos @archit-harness @sonichigo @rohitk-h @hemanthbsridhar
 
 #Reference Architectures
 /kb/reference-architectures @RajiKoppala @rssnyder @suranc @venkat65-harness @brandon-harness @goodrum-harness

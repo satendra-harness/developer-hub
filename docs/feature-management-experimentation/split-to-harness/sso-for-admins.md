@@ -1,5 +1,5 @@
 ---
-title: Before and After Guide (SSO for Split Admins)
+title: SSO for Split Admins
 description: Learn how how SSO for Split administrators works before and after your account migration.
 sidebar_label: SSO for Split Admins
 sidebar_position: 7
@@ -59,7 +59,7 @@ Do not create users or groups in `app.harness.io` ahead of time. The migration p
 1. Notify your Harness CSM or support@split.io when the SSO and SCIM steps are complete.
 
 :::info SSO + SCIM
-Be sure to configure SCIM to continually sync changes for ALL users and groups to `app.harness.io` before migration day.
+Be sure to configure SCIM to continually sync changes for ALL users and groups to `app.harness.io` before migration day. Use ___exactly the same names___ for your Split groups when setting up SCIM for Harness (only the Administrators group name is changed, as shown in the image below). The migration script will rely on each user group display name to correctly set user group permissions in Harness.
 
 You must ensure that all of your Split users and groups are synced (and kept continually updated) before migration day. We lead you through the process below, but here is a single image you can print out as a checklist:
 

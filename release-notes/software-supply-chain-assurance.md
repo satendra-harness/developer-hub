@@ -18,6 +18,39 @@ These release notes describe recent changes to Harness Supply Chain Security.
 :::
 
 
+## October 2025
+
+### Version: 1.43.0 , Plugin Version: 0.48.0
+
+#### New Features and Enhancements
+
+- Added a new api to fetch the `integration id`.
+
+```
+curl --location 'https://app.harness.io/gateway/ssca-manager/v1/orgs/<ORG-NAME>/projects/<PROJECT-NAME>/integration/integration-summary?github_org_url=<GITHUB_ORG_URL>' \ --header 'x-api-key: <X-API-KEY>'
+```
+
+
+- In the SBOM Orchestration step, now you can [enforce an OPA policy](/docs/software-supply-chain-assurance/manage-risk-and-compliance/opensource-security-risk-management#enforce-policy) to block pipelines that include End of Life (EOL) components based on their count.
+
+
+#### Fixed Issues
+
+- Fixed an issue where STO results were not showing up in the Artifact page and the chain of custody.
+
+- Added support to handle registry URLs that include port information (e.g., `nexus.example.com:7991/repository/group/repo`).
+
+- Fixed the intermittent SBOM failure caused by Cosign timeout ([ZD-93784](https://harnesssupport.zendesk.com/agent/tickets/93784)).
+
+- Added support to map vulnerability data for non-container artifacts.
+
+- Enabled routing to specific SCS step through the **View Pipeline Execution** links in the chain of custody.
+
+- Fixed **unsupported manifest errors** while fetching image digests in the SBOM Orchestration step ([ZD-92970](https://harnesssupport.zendesk.com/agent/tickets/92970,), [ZD-92711](https://harnesssupport.zendesk.com/agent/tickets/92711)).
+
+- Added RBAC support for secrets referenced in the SCS steps to ensure pipelines fail when the secrets are inaccessible. This is behind FF `SSCA_RBAC_CHECK_SECRETS`.
+
+
 ## September 2025
 
 ### Version: 1.41.0 , Plugin Version: 0.45.0
@@ -79,8 +112,8 @@ These release notes describe recent changes to Harness Supply Chain Security.
 
 - The [SBOM tab](https://developer.harness.io/docs/software-supply-chain-assurance/artifact-security/overview#sbom-tab) now displays component-level vulnerabilities by mapping STO Snyk scan results to SBOM components.
 - Two new dashboards are now available:
-   - [Component Violations for Artifacts and Code Repositories](/docs/software-supply-chain-assurance/open-source-management/dependencies/component-violations) to flag pipelines for SBOM violations across repositories in different projects.
-   - [Component Summary for Artifacts and Code Repositories](/docs/software-supply-chain-assurance/open-source-management/dependencies/component-summary) to display all unique components across artifacts and repositories within your account
+   - [Component Violations for Artifacts and Code Repositories](/docs/software-supply-chain-assurance/dashboards-and-reports/component-violations) to flag pipelines for SBOM violations across repositories in different projects.
+   - [Component Summary for Artifacts and Code Repositories](/docs/software-supply-chain-assurance/dashboards-and-reports/component-summary) to display all unique components across artifacts and repositories within your account
 - SBOM now uses the repository name as the default application name. To override this and use `/harness` as the application name, set the stage variable `SYFT_SBOM_NO_SOURCE_NAME=TRUE`. ([ZD-87366](https://harnesssupport.zendesk.com/agent/tickets/87366))
 
 #### Fixed Issues
@@ -158,7 +191,7 @@ JFrog: `</your-repo/test-image>:tag`
 
 #### New features and enhancements
 
-- Added [Dashboards for License and Compliance Reports](/docs/software-supply-chain-assurance/open-source-management/dependencies/view-licenses) to easily access detailed information about the licenses and compliance status associated with your software components at one place.
+- Added [Dashboards for License and Compliance Reports](/docs/software-supply-chain-assurance/dashboards-and-reports/view-licenses) to easily access detailed information about the licenses and compliance status associated with your software components at one place.
 - Added [Artifact Signing and Verification](/docs/software-supply-chain-assurance/artifact-security/sign-verify/sign-artifacts) steps to sign artifacts and verify the signed artifacts before it gets deployed to ensure integrity and prevent tampering.
 - With Harness Internal Developer Portal (IDP) workflow now you can use a single GitHub connector at the account level and selectively onboard repositories to the project of your choice and automatically create scan pipelines to scan those repositories.
 - Secure attestation with Cosign using HashiCorp Vault, now supported via Vault Proxy with GCP Auth for enhanced security.
